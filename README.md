@@ -1,1 +1,0 @@
-# INTProgl_Ziyaret-iTakip
