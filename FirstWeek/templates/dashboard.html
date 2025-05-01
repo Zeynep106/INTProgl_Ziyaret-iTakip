@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Kontrol Paneli{% endblock %}
+
+{% block content %}
+    <h2>Hoş Geldin!</h2>
+    <p>Buradan ziyaretçileri yönetebilirsin:</p>
+
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <a href="/ziyaretci_ekle" class="btn btn-primary">Yeni Ziyaretçi Ekle</a>
+        <a href="/ziyaretci_listesi" class="btn btn-secondary">Ziyaretçi Listesini Görüntüle</a>
+    </div>
+{% endblock %}

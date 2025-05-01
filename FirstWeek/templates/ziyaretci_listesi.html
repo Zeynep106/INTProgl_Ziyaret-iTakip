@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Ziyaretçi Listesi{% endblock %}
+
+{% block content %}
+<h2>Ziyaretçi Listesi</h2>
+
+{% if liste %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ad Soyad</th>
+            <th>TC Kimlik No</th>
+            <th>Giriş Saati</th>
+            <th>Ziyaret Amacı</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for z in liste %}
+        <tr>
+            <td>{{ z.ad }}</td>
+            <td>{{ z.tc }}</td>
+            <td>{{ z.saat }}</td>
+            <td>{{ z.amac }}</td>
+            <td>
+                <a href="/ziyaretci_duzenle/{{ z.id }}" class="btn btn-sm btn-warning">Düzenle</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>Henüz ziyaretçi yok.</p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Ziyaretçi Ekle{% endblock %}
+
+{% block content %}
+    <h2>Yeni Ziyaretçi Ekle</h2>
+    <form method="post">
+        <div class="mb-3">
+            <label for="ad" class="form-label">Ad Soyad</label>
+            <input type="text" class="form-control" id="ad" name="ad" placeholder="Ziyaretçi adı">
+        </div>
+        <div class="mb-3">
+            <label for="tc" class="form-label">TC Kimlik No</label>
+            <input type="text" class="form-control" id="tc" name="tc" placeholder="TC Kimlik Numarası">
+        </div>
+        <div class="mb-3">
+            <label for="giris_saati" class="form-label">Giriş Saati</label>
+            <input type="time" class="form-control" id="giris_saati" name="giris_saati">
+        </div>
+        <div class="mb-3">
+            <label for="amac" class="form-label">Ziyaret Amacı</label>
+            <input type="text" class="form-control" id="amac" name="amac" placeholder="Örneğin: toplantı, teslimat...">
+        </div>
+        <button type="submit" class="btn btn-success">Kaydet</button>
+    </form>
+{% endblock %}

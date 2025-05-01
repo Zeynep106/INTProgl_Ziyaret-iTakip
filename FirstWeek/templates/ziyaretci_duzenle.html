@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Ziyaretçi Düzenle{% endblock %}
+
+{% block content %}
+<h2>Ziyaretçi Bilgilerini Düzenle</h2>
+<form method="post">
+    <div class="mb-3">
+        <label for="ad" class="form-label">Ad Soyad</label>
+        <input type="text" class="form-control" id="ad" name="ad" value="{{ z.ad }}">
+    </div>
+    <div class="mb-3">
+        <label for="tc" class="form-label">TC Kimlik No</label>
+        <input type="text" class="form-control" id="tc" name="tc" value="{{ z.tc }}">
+    </div>
+    <div class="mb-3">
+        <label for="giris_saati" class="form-label">Giriş Saati</label>
+        <input type="time" class="form-control" id="giris_saati" name="giris_saati" value="{{ z.saat }}">
+    </div>
+    <div class="mb-3">
+        <label for="amac" class="form-label">Ziyaret Amacı</label>
+        <input type="text" class="form-control" id="amac" name="amac" value="{{ z.amac }}">
+    </div>
+    <button type="submit" class="btn btn-warning">Güncelle</button>
+</form>
+{% endblock %}
